@@ -1,0 +1,11 @@
+.main-content-catalog  {
+    padding-top: 65px;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .main-content-catalog {
+    padding-top: 30px;
+    width: 100%;
+}
+}
