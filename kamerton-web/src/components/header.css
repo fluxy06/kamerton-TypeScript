@@ -19,11 +19,11 @@
     width: 100%;
     max-width: 1170.4px;
     margin: 0 auto;
-    height: 50px;
+    height: 80px;
 }
 
 header h1 {
-    font-size: 36px;
+    font-size: calc(24px + 12 * (100vw - 320px) / 880);
     font-weight: 900;
     margin-right: 15px;;
 }
@@ -31,12 +31,12 @@ header h1 {
 header a {
     text-decoration: none;
     color: white;
-    font-size: 18px;;
+    font-size: calc(14px + 4 * (100vw - 320px) / 880);
 }
 header button {
   width: 194.4px;
   height: 40px;
-
+  font-size: calc(16px + 4 * (100vw - 320px) / 880);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,6 @@ header button {
 
   background-color: #218E0B; 
   color: white;
-  font-size: 20px;
   font-weight: 700;
   font-family: 'Montserrat Alternates', sans-serif;
 
@@ -144,13 +143,13 @@ header a:hover {
       header a {
       text-decoration: none;
       color: white;
-      font-size: 11px;
+      font-size: calc(11px + 11 * (100vw - 320px) / 880);
   }
 
   header button {
     width: 105px;
     height: 22.7px;
-    font-size: 12px;
+    font-size: calc(12px + 4 * (100vw - 320px) / 880);
     border-radius: 12.61px;
   }
 

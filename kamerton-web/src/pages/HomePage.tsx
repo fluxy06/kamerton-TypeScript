@@ -2,6 +2,7 @@ import React from "preact/compat";
 import './home.css';
 import HeroSection from "../components/HeroSection";
 import Welcome from "../components/welcome";
+import Services from "../components/services";
 
 const HomePage: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage: React.FC = () => {
       <main className="main-content-home">
         <HeroSection />
         <Welcome />
+        <Services />
       </main>
     </div>
   );
