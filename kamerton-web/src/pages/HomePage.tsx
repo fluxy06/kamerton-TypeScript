@@ -3,6 +3,7 @@ import './home.css';
 import HeroSection from "../components/HeroSection";
 import Welcome from "../components/welcome";
 import Services from "../components/services";
+import Info from "../components/info";
 
 const HomePage: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage: React.FC = () => {
         <HeroSection />
         <Welcome />
         <Services />
+        <Info />
       </main>
     </div>
   );
