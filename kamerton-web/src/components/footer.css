@@ -1,0 +1,136 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+  display: grid;
+  max-width: 1170.4px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+
+.footer-up-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-text h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(24px + 28 * (100vw - 270px) / 880);
+  font-weight: 900;
+  margin: 0 0 8px 0;
+}
+
+.footer-text p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(10px + 2 * (100vw - 270px) / 880);
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 13px;
+}
+
+.footer-navigation h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(20px + 4 * (100vw - 270px) / 880);
+  margin: 5px 0 20px 0;
+}
+
+.footer-navigation-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 20px;
+}
+
+.footer-navigation-links a {
+  font-size: calc(10px + 4 * (100vw - 270px) / 880);
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 13px;
+}
+
+.footer-contacts h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(20px + 4 * (100vw - 270px) / 880);
+  margin: 0 0 10px 0;
+}
+
+.footer-contacts p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(10px + 2 * (100vw - 270px) / 880);
+  font-weight: 400;
+  margin: 0 0 6px 0;
+}
+
+
+.footer-bottom-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 0.5px solid white;
+  padding-top: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-bottom-blocks a {
+  font-size: calc(10px + 4 * (100vw - 270px) / 880);
+}
+
+
+@media (max-width: 768px) {
+  .footer-up-blocks {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-blocks {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .footer-text,
+  .footer-navigation,
+  .footer-contacts {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .footer-text p {
+    text-align: center;
+  }
+}

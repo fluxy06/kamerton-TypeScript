@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import './app.css'
 import CatalogPage from "./pages/CatalogPage";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 export function App() {
   return (
@@ -13,6 +14,7 @@ export function App() {
         <HomePage path="/" />
         <CatalogPage  path="/catalog" />
       </Router>
+      <Footer/>
     </div>
   );
 }
