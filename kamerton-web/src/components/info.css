@@ -12,6 +12,10 @@
     padding-bottom: 10px;
 }
 
+.info  .scroll-button button{
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+}
+
 .info-block {
     --gap: 15px; 
     --row-gap: 10px;  

@@ -1,12 +1,17 @@
 import React from "preact/compat";
 import './catalog.css';
-import ScrollButton from "../components/ScrollButton";
+import HeroSectionCatalog from "../components/HeroSectionCatalog";
+import CatalogLocation from "../components/catalogLocation";
+import TutorialCatalog from "../components/tutorial";
+
+// CatalogPage Вторая страница 
 const CatalogPage: React.FC = () => {
   return (
     <div id="catalog-page">
       <main className="main-content-catalog">
-        <h2>О проекте</h2>
-        <p>Здесь будет информация о Kamerton.</p>
+          <HeroSectionCatalog />
+          <CatalogLocation />
+          <TutorialCatalog />
       </main>
     </div>
   );

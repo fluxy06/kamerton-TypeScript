@@ -17,6 +17,9 @@
     align-items: flex-start;
 }
 
+.welcome-section .scroll-button button{
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+}
 
 .right-welcome {
     display: flex;

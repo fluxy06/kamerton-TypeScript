@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+.services-button-serv  .scroll-button button{
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+}
+
 .services-button-serv .scroll-button {
     padding-left: 38px;
     padding-bottom: 10px;

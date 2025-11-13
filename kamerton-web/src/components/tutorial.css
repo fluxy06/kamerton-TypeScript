@@ -1,0 +1,78 @@
+.tutorial-catalog {
+  display: grid;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170.4px;
+  aspect-ratio: 1170.4 / 700; 
+  overflow: hidden;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 25px;
+  grid-template-rows: 3fr 1fr;
+  row-gap: 30px;
+}
+
+.tutorial {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.tutorial-blocks {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1170.4 / 380;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 10px;
+  box-sizing: border-box;
+}
+
+.tutorial .scroll-button {
+    padding-left: 20px;
+}
+
+.tutorial .scroll-button button {
+    padding-left: 20px;
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+}
+
+.tutorial h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(12px + 8 * (100vw / 1170.4));
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tutorial-one,
+.tutorial-two,
+.tutorial-three {
+  background-color: #202020;
+  border-radius: 10px;
+  aspect-ratio: 380 / 178.57; 
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tutorial-one {
+  grid-row: span 2 / span 2;
+}
+
+.tutorial-two {
+  grid-row: span 2 / span 2;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.tutorial-three {
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+

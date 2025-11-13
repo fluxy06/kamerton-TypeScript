@@ -1,0 +1,55 @@
+.catalog-location {
+  display: grid;
+  max-width: 1170.4px; 
+  justify-items: start;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+
+.catalog-location h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: calc(12px + 8 * (100vw - 320px) / 880);
+    white-space: nowrap;
+}
+
+.catalog-location .scroll-button {
+    padding-left: 20px;
+}
+
+.catalog-location .scroll-button button{
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+}
+
+
+.catalog-map {
+  width: 100%;
+  aspect-ratio: 1170.4 / 369.05;
+  border-radius: 15px;
+  background-color: #404040;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.no-aspect .catalog-map {
+  position: relative;
+  width: 100%;
+
+  padding-top: 31.5319548872%;
+  height: 0;
+}
+.no-aspect .catalog-map > .map-content {
+  position: absolute;
+  inset: 0;
+}
+
+.catalog-map iframe,
+.catalog-map img,
+.catalog-map .map-content {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; 
+}
