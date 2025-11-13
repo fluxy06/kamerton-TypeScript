@@ -6,123 +6,162 @@ a {
 
 .footer {
   display: grid;
-  max-width: 1170.4px;
   width: 100%;
+  max-width: 1170.4px;
+  height: calc(100vw / (1170.4 / 270));
+  max-height: 270px;
+  min-height: 180px;
+
   margin: 0 auto;
   margin-top: 25px;
   box-sizing: border-box;
+
+  padding-top: calc(10px + 5 * (100vw - 320px) / 850);
 }
 
 
 .footer-up-blocks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: calc(15px + 5 * (100vw - 320px) / 850);
   align-items: start;
 }
 
-
-.footer-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
-  align-items: flex-start;
-  text-align: left;
-}
-
-.footer-text h1 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: calc(24px + 28 * (100vw - 270px) / 880);
-  font-weight: 900;
-  margin: 0 0 8px 0;
-}
-
-.footer-text p {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: calc(10px + 2 * (100vw - 270px) / 880);
-  font-weight: 400;
-  margin: 0 0 10px 0;
-}
-
-
-.footer-navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding-top: 13px;
-}
-
-.footer-navigation h2 {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: calc(20px + 4 * (100vw - 270px) / 880);
-  margin: 5px 0 20px 0;
-}
-
-.footer-navigation-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px 20px;
-}
-
-.footer-navigation-links a {
-  font-size: calc(10px + 4 * (100vw - 270px) / 880);
-  text-decoration: none;
-  color: inherit;
-}
-
-
+.footer-text, 
+.footer-navigation,
 .footer-contacts {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
   align-items: flex-start;
   text-align: left;
-  padding-left: 20px;
-  padding-top: 13px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.footer-text h1,
+.footer-navigation h2,
+.footer-contacts h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-text h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(20px + 12 * (100vw / 1170.4));
+  font-weight: 900;
+  margin-bottom: calc(5px + 3 * (100vw / 1170.4));
+}
+
+.footer-text p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(8px + 4 * (100vw / 1170.4));
+  font-weight: 400;
+  margin: 0 0 calc(8px + 3 * (100vw / 1170.4)) 0;
+}
+
+.footer-navigation {
+  padding-left: calc(8px + 5 * (100vw / 1170.4));
+}
+
+.footer-navigation h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: calc(16px + 5 * (100vw / 1170.4));
+  margin-bottom: calc(10px + 5 * (100vw / 1170.4));
+}
+
+.footer-navigation-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(4px + 2 * (100vw / 1170.4)) calc(10px + 5 * (100vw / 1170.4));
+}
+
+.footer-navigation-links a {
+  font-size: calc(9px + 3 * (100vw / 1170.4));
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-contacts {
+  padding-left: calc(10px + 10 * (100vw / 1170.4));
 }
 
 .footer-contacts h2 {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: calc(20px + 4 * (100vw - 270px) / 880);
-  margin: 0 0 10px 0;
+  font-size: calc(16px + 5 * (100vw / 1170.4));
+  margin-bottom: calc(10px + 3 * (100vw / 1170.4));
 }
 
 .footer-contacts p {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-size: calc(10px + 2 * (100vw - 270px) / 880);
+  font-size: calc(9px + 3 * (100vw / 1170.4));
   font-weight: 400;
-  margin: 0 0 6px 0;
+  margin: 0 0 calc(5px + 2 * (100vw / 1170.4)) 0;
 }
 
 
 .footer-bottom-blocks {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 0.5px solid white;
-  padding-top: 15px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  border-top: 0.5px solid white;
+  padding-top: calc(5px + 5 * (100vw / 1170.4));
+  text-align: center;
+  width: 100%;
 }
 
 .footer-bottom-blocks a {
-  font-size: calc(10px + 4 * (100vw - 270px) / 880);
+  flex: 1;
+  text-align: center;
+  font-size: calc(9px + 3 * (100vw / 1170.4));
 }
 
+.footer-bottom-blocks a:first-child {
+  text-align: left;
+}
+.footer-bottom-blocks a:last-child {
+  text-align: right;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+  .footer {
+    display: grid;
+    width: 100%;
+    max-width: 699px;
+    height: auto;
+    min-height: 602.24px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: calc(12px + 6 * (100vw - 320px) / 379);
+    gap: calc(10px + 5 * (100vw - 320px) / 379); 
+  }
+
   .footer-up-blocks {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: calc(10px + 5 * (100vw - 320px) / 379);
   }
 
-  .footer-bottom-blocks {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .footer-text {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
   }
 
-  .footer-text,
+  .footer-text h1 {
+    font-size: calc(24px + 16 * (100vw - 320px) / 379);
+    margin-bottom: calc(16px + 8 * (100vw - 320px) / 379);
+  }
+
+  .footer-text p {
+    font-size: calc(12px + 6 * (100vw - 320px) / 379);
+    margin-bottom: calc(35px + 12 * (100vw - 320px) / 379);
+  }
+
   .footer-navigation,
   .footer-contacts {
     align-items: center;
@@ -130,7 +169,42 @@ a {
     padding-left: 0;
   }
 
-  .footer-text p {
+  .footer-navigation h2,
+  .footer-contacts h2 {
+    font-size: calc(18px + 8 * (100vw - 320px) / 379);
+  }
+
+  .footer-navigation-links a,
+  .footer-contacts p {
+    font-size: calc(12px + 8 * (100vw - 320px) / 379);
+  }
+
+ .footer-bottom-blocks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: calc(6px + 4 * (100vw - 320px) / 379);
+  text-align: center;
+  justify-items: center;
+  padding-top: calc(12px + 8 * (100vw - 320px) / 379);
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+  border-top: 0.5px solid white; 
+}
+
+  .footer-bottom-blocks a {
     text-align: center;
+    font-size: calc(12px + 6 * (100vw - 320px) / 379);
+    width: 100%;
+  }
+  .footer-bottom-blocks a:first-child {
+      text-align: center;
+      font-size: calc(12px + 6 * (100vw - 320px) / 379);
+      width: 100%;
+  }
+
+  .footer-bottom-blocks a:last-child {
+    text-align: center;
+      font-size: calc(12px + 6 * (100vw - 320px) / 379);
+      width: 100%;
   }
 }
