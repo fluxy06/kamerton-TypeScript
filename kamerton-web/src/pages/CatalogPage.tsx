@@ -1,4 +1,4 @@
-import React from "preact/compat";
+import * as React from "react";
 import './catalog.css';
 import HeroSectionCatalog from "@components/HeroSectionCatalog";
 import CatalogLocation from "@components/catalogLocation";

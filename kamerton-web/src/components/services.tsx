@@ -1,4 +1,4 @@
-import React from "preact/compat";
+import * as React from "react";
 import "./services.css";
 import Card from "@components/card";
 import CityImg from '@img/city-img.svg'

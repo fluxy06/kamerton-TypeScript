@@ -1,4 +1,4 @@
-import React from "preact/compat";
+import * as React from "react";
 import "./ScrollButton.css";
 
 interface ScrollButtonProps {

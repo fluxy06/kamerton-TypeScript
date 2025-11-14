@@ -3,13 +3,14 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1170.4px;
-  aspect-ratio: 1170.4 / 700; 
+  aspect-ratio: 1170.4 / 1100; 
   overflow: hidden;
   border-radius: 15px;
   box-sizing: border-box;
   margin-top: 25px;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
   row-gap: 30px;
+  padding: 0px 10px 0px 10px;
 }
 
 .tutorial {
@@ -27,6 +28,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   column-gap: 10px;
+  padding: 0px 10px;
   box-sizing: border-box;
 }
 
@@ -36,7 +38,7 @@
 
 .tutorial .scroll-button button {
     padding-left: 20px;
-    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+    font-size: calc(10px + 5 * (100vw - 320px) / 930);
 }
 
 .tutorial h2 {
@@ -46,17 +48,72 @@
     white-space: nowrap;
 }
 
+.tutorial-blocks {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
 .tutorial-one,
 .tutorial-two,
 .tutorial-three {
   background-color: #202020;
   border-radius: 10px;
-  aspect-ratio: 380 / 178.57; 
   width: 100%;
-  height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 20px 15px 20px; 
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: grab;
+  will-change: transform;
+  overflow: hidden;
+
+  aspect-ratio: 380 / 178.57;
+  min-height: 120px;
+  text-align: left;
+}
+
+.tutorial-blocks div h2:first-of-type {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 900;
+  font-size: calc(12px + 34 * (100vw / 1170.4));
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.tutorial-blocks div h3 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  font-size: calc(7px + 7 * (100vw / 1170.4));
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.tutorial-blocks div p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: calc(5px + 7 * (100vw / 1170.4));
+  margin: 0;
+  line-height: 1;
+  text-align: left;
+  word-break: break-word;
+}
+
+.tutorial-blocks div:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .tutorial-one {
@@ -76,7 +133,124 @@
 }
 
 
+
 .tutorial-catalog-contact {
-  
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  text-align: center;
+  box-sizing: border-box;
+  gap: 20px; 
+  padding-top: 5px;
+  width: 100%;
+  max-width: 1170.4px;
 }
 
+.tutorial-catalog-contact h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  font-size: calc(12px + 12 * (100vw / 1170.4));
+  line-height: 1.2;
+  margin: 0;
+}
+
+.tutorial-catalog-contact button {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  font-size: calc(12px + 8 * (100vw / 1170.4));
+  width: clamp(200px, 50%, 585px);
+  max-width: 100%;
+  height: 60px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-color: #218E0B; 
+  color: white;
+  font-weight: 700;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 6px rgba(33, 142, 11, 0.35),
+    0 0 12px rgba(33, 142, 11, 0.25);
+
+  transition: all 0.25s ease-in-out;
+}
+
+.tutorial-catalog-contact button:hover {
+  transform: translateY(-1px);
+  background-color: #1d7e0a;
+  box-shadow:
+    0 0 18px rgba(33, 142, 11, 0.55),
+    0 0 25px rgba(33, 142, 11, 0.35);
+}
+
+.tutorial-catalog-contact button:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 0 15px rgba(33, 142, 11, 0.3  ),
+    inset 0 0 5px rgba(255, 255, 255, 0.1);
+  transition: all 0.15s ease-out;
+}
+
+.tutorial-catalog-contact button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 700px) {
+  .tutorial-blocks {
+    grid-template-columns: 1fr; /* один блок в ряд */
+    grid-template-rows: auto;
+    row-gap: 15px;
+  }
+
+  .tutorial-one,
+  .tutorial-two,
+  .tutorial-three {
+    aspect-ratio: auto; /* для узких экранов блоки по высоте под текст */
+    width: 100%;
+    padding: 15px;
+  }
+
+  .tutorial-blocks div h2:first-of-type {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+
+  .tutorial-blocks div h3 {
+    font-size: clamp(14px, 3vw, 18px);
+  }
+
+  .tutorial-blocks div p {
+    font-size: clamp(12px, 2.5vw, 14px);
+  }
+
+  .tutorial-catalog-contact {
+    padding: 10px 15px;
+    gap: 15px; 
+  }
+
+  .tutorial-catalog-contact h1 {
+    font-size: clamp(20px, 5vw, 24px);
+    white-space: normal;
+  }
+
+  .tutorial-catalog-contact button {
+    width: 80%;
+    height: 50px;
+    font-size: 14px;
+  }
+}

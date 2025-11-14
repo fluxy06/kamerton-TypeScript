@@ -1,5 +1,5 @@
-import React from "preact/compat";
-import { Router } from "preact-router";
+import * as React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import './app.css'
 import CatalogPage from "@pages/CatalogPage";
@@ -9,12 +9,14 @@ import Footer from "@components/footer";
 export function App() {
   return (
     <div className="app">
-      <Header />
       <Router>
-        <HomePage path="/" />
-        <CatalogPage  path="/catalog" />
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+        </Routes>
+        <Footer />
       </Router>
-      <Footer/>
     </div>
   );
 }

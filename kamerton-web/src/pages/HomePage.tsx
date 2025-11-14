@@ -1,4 +1,4 @@
-import React from "preact/compat";
+import * as React from "react";
 import './home.css';
 import HeroSection from "@components/HeroSection";
 import Welcome from "@components/welcome";
