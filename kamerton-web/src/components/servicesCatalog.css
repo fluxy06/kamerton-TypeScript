@@ -21,6 +21,10 @@
     padding-left: 20px;
 }
 
+.services-catalog .scroll-button button {
+    font-size: calc(10px + 5 * (100vw - 320px) / 880);
+}
+
 .services-catalog-scroll-up {
     display: grid;
     justify-items: center;
@@ -50,7 +54,81 @@
     margin: 0;
 }
 
+.services-catalog-scroll-up button {
+  width: 60px;
+  height: 60px;
+  font-size: calc(30px + 4 * (100vw - 320px) / 880);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: rgba(46, 190, 20, 0.55);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
 
+  color: white;
+  font-weight: 900;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 18px rgba(46, 190, 20, 0.55),
+    0 4px 14px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.25s ease-in-out;
+}
+
+.services-catalog-scroll-up button:hover {
+  transform: translateY(-2px);
+  background: rgba(46, 190, 20, 0.65);
+  backdrop-filter: blur(10px) saturate(200%);
+  box-shadow:
+    0 0 14px rgba(255, 255, 255, 0.7),
+    0 0 25px rgba(46, 190, 20, 0.65),
+    0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.services-catalog-scroll-up button:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.4),
+    inset 0 0 6px rgba(255, 255, 255, 0.25);
+  transition: all 0.15s ease-out;
+}
+
+.services-catalog-scroll-up button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.services-catalog-scroll-up button::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 62%;
+  height: 42%;
+  background: rgba(255, 255, 255, 0.3);
+  filter: blur(8px);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.services-catalog-scroll-up button:hover::after {
+  opacity: 0.55;
+}
 
 
 .services-catalog-scroll-up .card-button {

@@ -20,6 +20,7 @@
     max-width: 1170.4px;
     margin: 0 auto;
     height: 80px;
+    padding: 0px 10px;
 }
 
 header h1 {
@@ -34,9 +35,9 @@ header a {
     font-size: calc(14px + 4 * (100vw - 320px) / 880);
 }
 header button {
-  width: 194.4px;
-  height: 40px;
-  font-size: calc(16px + 4 * (100vw - 320px) / 880);
+  width: clamp(130px, 18vw, 194.4px);
+  height: clamp(32px, 4vw, 40px);
+  font-size: clamp(14px, 1.8vw, 20px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -106,6 +107,7 @@ header a:hover {
     display: flex;
     align-items: center;
     column-gap: 35px;;
+    padding-right: 20px;
 }
 
 .header-links {
