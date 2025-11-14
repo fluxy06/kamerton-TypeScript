@@ -3,7 +3,7 @@ import './catalog.css';
 import HeroSectionCatalog from "@components/HeroSectionCatalog";
 import CatalogLocation from "@components/catalogLocation";
 import TutorialCatalog from "@components/tutorial";
-
+import ServicesCatalog from "@/components/servicesCatalog";
 // CatalogPage Вторая страница 
 const CatalogPage: React.FC = () => {
   return (
@@ -12,6 +12,7 @@ const CatalogPage: React.FC = () => {
           <HeroSectionCatalog />
           <CatalogLocation />
           <TutorialCatalog />
+          <ServicesCatalog />
       </main>
     </div>
   );
