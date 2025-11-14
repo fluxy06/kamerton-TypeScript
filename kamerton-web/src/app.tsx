@@ -1,4 +1,4 @@
-import * as React from "react";
+// React JSX runtime is configured ("jsx": "react-jsx") — explicit React import is not required
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import './app.css'

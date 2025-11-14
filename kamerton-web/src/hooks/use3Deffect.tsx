@@ -12,7 +12,7 @@ export const use3dHover = (classNames: string[]): RefArray => {
       el: HTMLDivElement;
     }[] = [];
 
-    classNames.forEach((cls, idx) => {
+  classNames.forEach((_, idx) => {
       const block = blockRefs.current[idx];
       if (!block) return;
 
