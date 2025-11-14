@@ -1,6 +1,6 @@
 import React from "preact/compat";
 import './catalogLocation.css'
-import ScrollButton from "./ScrollButton";
+import ScrollButton from "@components/ScrollButton";
 
 
 const CatalogLocation:React .FC = () => {

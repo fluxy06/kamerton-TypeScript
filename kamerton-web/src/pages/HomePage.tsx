@@ -1,10 +1,9 @@
 import React from "preact/compat";
 import './home.css';
-import HeroSection from "../components/HeroSection";
-import Welcome from "../components/welcome";
-import Services from "../components/services";
-import Info from "../components/info";
-import Footer from "../components/footer";
+import HeroSection from "@components/HeroSection";
+import Welcome from "@components/welcome";
+import Services from "@components/services";
+import Info from "@components/info";
 
 const HomePage: React.FC = () => {
   return (

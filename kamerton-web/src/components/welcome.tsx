@@ -1,6 +1,6 @@
 import React from "preact/compat";
 import "./welcome.css"
-import ScrollButton from "./ScrollButton";
+import ScrollButton from "@components/ScrollButton";
 
 export const Welcome: React.FC = () => {
     return (

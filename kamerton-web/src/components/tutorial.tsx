@@ -1,12 +1,14 @@
 import React from "preact/compat";
 import './tutorial.css'
-import ScrollButton from "./ScrollButton";
+import ScrollButton from "@components/ScrollButton";
 
-const TutorialCatalog:React .FC = () => {
+
+
+const TutorialCatalog:React.FC = () => {
     return(
         <div className="tutorial-catalog">
                 <div className="tutorial">
-                        <ScrollButton label="как это работает" />
+                        <ScrollButton label="контакты" />
                         <h2>Сейчас мы все расскажем. Все намного проще чем вам кажется!</h2>
                         <div className="tutorial-blocks">
                                 <div className="tutorial-one ">

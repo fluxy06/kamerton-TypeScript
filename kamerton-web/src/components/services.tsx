@@ -1,8 +1,8 @@
 import React from "preact/compat";
 import "./services.css";
-import Card from "./card";
-import CityImg from '../assets/img/city-img.svg'
-import ScrollButton from "./ScrollButton";
+import Card from "@components/card";
+import CityImg from '@img/city-img.svg'
+import ScrollButton from "@components/ScrollButton";
 
 const Services: React.FC = () => {
   return (

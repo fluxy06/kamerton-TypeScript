@@ -1,6 +1,6 @@
 import React from "preact/compat";
 import './info.css'
-import ScrollButton from "./ScrollButton";
+import ScrollButton from "@components/ScrollButton";
 
 const Info: React.FC = ({}) => {
   return (
