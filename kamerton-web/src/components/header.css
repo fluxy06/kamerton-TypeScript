@@ -148,9 +148,9 @@ header a:hover {
   }
 
   header button {
-    width: 105px;
+    width: clamp(90px, 2vw, 120px);
     height: 22.7px;
-    font-size: calc(12px + 4 * (100vw - 320px) / 880);
+    font-size: calc(10px + 6 * (100vw - 320px) / 880);
     border-radius: 12.61px;
   }
 
