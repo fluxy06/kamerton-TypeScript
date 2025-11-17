@@ -15,12 +15,40 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             <div className="hero-left-small-one">
-                  <div className="text-small-one">123</div>
-                  <div className="img-small-one">img</div>
+                  <div className="text-small-one">
+                        <h1>5</h1>
+                        <p>лучших<br/>расположений</p>
+                  </div>
+                  <div className="img-small-one">
+                      <img src={HeroMiniImg} alt="@media" />
+                      <img src={HeroMiniImg} alt="@media" />
+                      <img src={HeroMiniImg} alt="@media" />
+                      <img src={HeroMiniImg} alt="@media" />
+                      <div className="next-page">
+                        <svg 
+                          width="30" 
+                          height="30" 
+                          viewBox="0 0 24 24" 
+                          fill="none"
+                          stroke="currentColor" 
+                          stroke-width="2.2" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round"
+                        >
+                          <path d="M4 12h14"></path>
+                          <path d="M12 5l7 7-7 7"></path>
+                        </svg>
+                      </div>
+                  </div>
             </div>
             <div className="hero-left-small-two">
-                  <div className="text-small-one">123</div>
-                  <div className="img-small-one">img</div>
+                  <div className="text-small-one">
+                        <h1>80%</h1>
+                        <p>скорость<br/>охвата</p>
+                  </div>
+                  <div className="img-small-one-two">
+                        <img src={GraphImg} alt="@media" />
+                  </div>
             </div>
             <div className="hero-right-big">
             </div>
