@@ -8,7 +8,7 @@
 
 .form-contact h1 {
   color: black;
-  font-size: 24px;
+  font-size: calc(18px + 6 * (100vw - 320px) / 880);
   font-family: 'Montserrat Alternates';
   padding: 0px;
   margin-bottom: 0px;
@@ -17,11 +17,160 @@
 .form-contact p {
   color: hsla(0, 0%, 0%, 0.25);
   margin-top: 0px;
-  font-size: 14px;
+  font-size: calc(14px + 2 * (100vw - 320px) / 880);
   font-family: 'Montserrat';
 }
 
 .input-section p {
+  font-size: calc(10px + 4 * (100vw - 320px) / 880);
     color: black;
-    margin-bottom: 1px;
+    margin-bottom: 0.5px;
+    padding-top: 5px;
+}
+
+.input-section input,
+.input-section textarea {
+  font-size: calc(10px + 4 * (100vw - 320px) / 880);
+  width: 100%;
+  max-width: 360px;
+  min-width: 360px; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  height: auto; 
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #F3F3F5;
+  color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  line-height: 1.4;
+}
+
+.input-section input {
+  height: calc(70px * (90vw / 1170)); 
+  max-height: 70px;
+}
+
+.input-section textarea {
+  height: calc(70px * (90vw / 1170));
+  max-height: 70px;
+  min-height: 55px;
+  margin-bottom: 20px;
+  resize: none; 
+}
+
+.input-section input:hover,
+.input-section textarea:hover {
+  border-color: #26A50D;
+  box-shadow: 0 0 6px rgba(191, 255, 164, 0.4);
+}
+
+.input-section input:focus,
+.input-section textarea:focus {
+  outline: none;
+  border: 2px solid #26A50D;
+  box-shadow: 0 4px 12px rgba(99, 255, 182, 0.3); 
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.sumbitForm {
+  width: 100%;
+  max-width: 360px;
+  min-width: 360px;
+  height: 42px;
+  font-size: calc(12px + 4 * (100vw - 320px) / 880);
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #26A50D 0%, #1f8f0f 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(38, 165, 13, 0.4), 
+              0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: 
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sumbitForm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(38, 165, 13, 0.45), 
+              0 5px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, #30c118 0%, #259b18 100%);
+}
+
+.sumbitForm:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 8px rgba(38, 165, 13, 0.35), 
+              0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.sumbitForm::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.sumbitForm:hover::before {
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+      .form-contact h1 {
+  color: black;
+  font-size: calc(16px + 14 * (100vw - 320px) / 880);
+  font-family: 'Montserrat Alternates';
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.form-contact p {
+  color: hsla(0, 0%, 0%, 0.25);
+  margin-top: 0px;
+  font-size: calc(10px + 14 * (100vw - 320px) / 880);
+  font-family: 'Montserrat';
+}
+
+
+.input-section {
+    width: 100%; 
+    box-sizing: border-box;
+  }
+
+  .input-section input,
+  .input-section textarea {
+    width: 100%;
+    max-width: 100%; 
+    min-width: 0;
+    border-radius: 6.55px;
+    box-sizing: border-box;
+    font-size: calc(10px + 13 * (100vw - 320px) / 880);
+  }
+
+.sumbitForm {
+  width: 100%;
+  max-width: 360px;
+  min-width: 235.39px;
+  min-height: 35px;
+  height: 100%;
+  max-height: 45px;
+  border-radius: 6.55px;
+  font-size: calc(12px + 10 * (100vw - 320px) / 880);
+}
+
 }

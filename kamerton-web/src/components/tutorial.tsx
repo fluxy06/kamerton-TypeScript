@@ -2,11 +2,12 @@ import * as React from "react";
 import './tutorial.css'
 import ScrollButton from "@components/ScrollButton";
 import { use3dHover } from "@/hooks/use3Deffect";
-
+import { useModalWithAnimation } from "@hooks/useModal"; 
+import FormContact from "@components/formContact";
 
 const TutorialCatalog:React.FC = () => {
     const blocksRef = use3dHover(['tutorial-one', 'tutorial-two', 'tutorial-three']);
-
+    const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
     return(
         <div className="tutorial-catalog">
                 <div className="tutorial">
@@ -32,8 +33,9 @@ const TutorialCatalog:React.FC = () => {
                 </div>
                 <div className="tutorial-catalog-contact">
                         <h1>Уже готовы к запуску?<br/>Свяжитесь с нами</h1>
-                        <button>связаться</button>
+                        <button  onClick={openModal}>связаться</button>
                 </div>
+                {Modal}
         </div>
     )
 }

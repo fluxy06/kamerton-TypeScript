@@ -3,6 +3,7 @@
     import ScrollButton from "@components/ScrollButton";
     import Card from "@components/card";
     import CityImg from '@img/city-img.svg';
+    import CityImgTwo from '@img/city-banner.svg'
 import { useScrollToTop } from "@/hooks/scroll-up";
 
     const ServicesCatalog:React.FC = () => {
@@ -23,7 +24,7 @@ import { useScrollToTop } from "@/hooks/scroll-up";
                                 </button>
                             </div>
                             <Card img={CityImg} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/>
-                            <Card img={CityImg} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/>
+                            <Card img={CityImgTwo} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/>
                     </div>
             </div>
         )

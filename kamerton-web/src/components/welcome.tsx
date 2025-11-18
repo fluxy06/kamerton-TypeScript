@@ -1,8 +1,11 @@
 import * as React from "react";
 import "./welcome.css"
 import ScrollButton from "@components/ScrollButton";
+import { useModalWithAnimation } from "@hooks/useModal"; 
+import FormContact from "@components/formContact";
 
 export const Welcome: React.FC = () => {
+    const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
     return (
         <div className="welcome-section">
             <div className="left-welcome">
@@ -18,8 +21,9 @@ export const Welcome: React.FC = () => {
                     долгосрочные партнерские отношения,<br/>
                     основанные на качестве, ответственности и<br/>
                     взаимном уважении.</p>
-         <button className="welcome-contact">Связаться</button>
+         <button className="welcome-contact" onClick={openModal}>Связаться</button>
             </div>
+            {Modal}
         </div>
     );
 }

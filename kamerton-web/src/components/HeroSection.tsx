@@ -4,8 +4,12 @@ import HeroMiniImg from "@img/hero-mini.svg";
 import HeroMiniImgTwo from "@img/hero-mini-two.svg"
 import HeroMiniImgThree from "@img/hero-mini-three.svg"
 import GraphImg from "@img/graph.svg";
+import { useModalWithAnimation } from "@hooks/useModal"; 
+import FormContact from "@components/formContact";
+import { Link } from "react-router-dom"; 
 
 const HeroSection: React.FC = () => {
+   const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
   return (
      <div className="hero-section">
             <div className="hero-content-left">
@@ -13,7 +17,7 @@ const HeroSection: React.FC = () => {
                           <h1>Самая эффективная реклама в Богородске </h1>
                           <p>Ваш бизнес увидят даже те, кого не берут обычные таргетированные объявления.
                               Максимальный охват новой аудитории.</p>
-                            <button>связаться</button>
+                            <button onClick={openModal}>связаться</button>
                   </div>
                   <div className="hero-content-left-small">
                         <div className="graph-text-hero">
@@ -26,7 +30,7 @@ const HeroSection: React.FC = () => {
                               <img src={HeroMiniImgTwo} alt="" />
                               <img src={HeroMiniImg} alt="" />
                               <img src={HeroMiniImgThree} alt="" />
-                              <div className="next-page-img">Далее</div>
+                              <Link to="/catalog"><div className="next-page-img">Далее</div></Link>
                         </div>
                   </div>
                   <div className="hero-content-left-small-catalog">
@@ -39,6 +43,7 @@ const HeroSection: React.FC = () => {
             </div>
             <div className="hero-content-right">
             </div>
+            {Modal}
     </div>
   );
 };

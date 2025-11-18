@@ -44,7 +44,7 @@ export const useModalWithAnimation = ({ children }: UseModalWithAnimationOptions
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             style={{
               position: 'fixed',
               top: 0,
@@ -61,7 +61,7 @@ export const useModalWithAnimation = ({ children }: UseModalWithAnimationOptions
               style={{
                 position: 'relative',
                 background: '#fff',
-                padding: '32px',
+                padding: '13px',
                 borderRadius: '20px',
                 maxWidth: '440px',
                 width: 'clamp(200px, 90vw, 440px)',

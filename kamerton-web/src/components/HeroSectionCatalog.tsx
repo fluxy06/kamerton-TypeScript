@@ -1,8 +1,11 @@
 import * as React from "react";
 import "./HeroSectionCatalog.css";
 import GraphImg from '@img/graph.svg'
+import { useModalWithAnimation } from "@hooks/useModal"; 
+import FormContact from "@components/formContact";
 
 const HeroSectionCatalog: React.FC = () => {
+   const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
   return (
     <div className="hero-section-catalog">
             <div className="hero-content-left-catalog">
@@ -12,7 +15,7 @@ const HeroSectionCatalog: React.FC = () => {
                             на остановках общественного транспорта. 
                             Они эффективно охватывают пешеходов, пассажиров и водителей, 
                             донося ваше сообщение до самой активной аудитории города.</p>
-                            <button>связаться</button>
+                            <button onClick={openModal}>связаться</button>
                   </div>
                   <div className="hero-content-left-small-catalog">
                         <div className="graph-text">
@@ -32,6 +35,7 @@ const HeroSectionCatalog: React.FC = () => {
             <div className="hero-content-right-catalog">
                   <div className="LogoImage"></div>
             </div>
+            {Modal}
     </div>
   );
 }
