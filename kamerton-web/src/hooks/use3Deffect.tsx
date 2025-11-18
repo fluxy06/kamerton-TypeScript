@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 type RefArray = React.MutableRefObject<(HTMLDivElement | null)[]>;
 
 /**
- * @param classNames Массив классов блоков (для удобства рефов)
+ * @param classNames
  */
 export const use3dHover = (classNames: string[]): RefArray => {
   const blockRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -22,7 +22,6 @@ export const use3dHover = (classNames: string[]): RefArray => {
       let frame: number | null = null;
 
       const handleMouseMove = (e: MouseEvent) => {
-        // отменяем предыдущий requestAnimationFrame, если он не выполнен
         if (frame) cancelAnimationFrame(frame);
 
         frame = requestAnimationFrame(() => {
@@ -36,7 +35,7 @@ export const use3dHover = (classNames: string[]): RefArray => {
           const rotateY = ((x - centerX) / centerX) * 10;
 
           block.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
-          block.style.transition = "transform 0.1s ease"; // плавная анимация
+          block.style.transition = "transform 0.1s ease"; 
         });
       };
 
@@ -44,7 +43,7 @@ export const use3dHover = (classNames: string[]): RefArray => {
         if (frame) cancelAnimationFrame(frame);
 
         block.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
-        block.style.transition = "transform 0.3s ease"; // плавное возвращение
+        block.style.transition = "transform 0.3s ease"; 
       };
 
       block.addEventListener("mousemove", handleMouseMove);
@@ -53,7 +52,6 @@ export const use3dHover = (classNames: string[]): RefArray => {
       handlers.push({ move: handleMouseMove, leave: handleMouseLeave, el: block });
     });
 
-    // очистка
     return () => {
       handlers.forEach(({ el, move, leave }) => {
         el.removeEventListener("mousemove", move);

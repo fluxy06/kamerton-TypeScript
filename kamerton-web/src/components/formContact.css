@@ -1,0 +1,27 @@
+.form-contact {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
+.form-contact h1 {
+  color: black;
+  font-size: 24px;
+  font-family: 'Montserrat Alternates';
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.form-contact p {
+  color: hsla(0, 0%, 0%, 0.25);
+  margin-top: 0px;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+
+.input-section p {
+    color: black;
+    margin-bottom: 1px;
+}
