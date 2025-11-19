@@ -5,9 +5,9 @@ import ScrollButton from "@components/ScrollButton";
 const Info: React.FC = ({}) => {
   return (
     <div className="info">
-      <ScrollButton label="контакты"/>
+      <ScrollButton label="контакты" targetId="info-block" centered/>
       <p>Готовы начать работу? Свяжитесь с нами удобным для вас способом.</p>
-      <div className="info-block">
+      <div className="info-block" id="info-block">
             <div className="adres mini-info">
                     <h1 className="text-mini-info-h1">📍</h1>
                     <h2 className="text-mini-info-h2">Адрес</h2>

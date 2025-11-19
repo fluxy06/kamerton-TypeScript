@@ -10,7 +10,7 @@ export function App() {
       <Router>
         <Header />
         <AnimatedRoutes />
-        <Footer />
+        <Footer/>
       </Router>
     </div>
   );

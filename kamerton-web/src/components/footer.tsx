@@ -1,7 +1,13 @@
 import * as React from "react";
 import './footer.css'
+import tg from '@img/tg.svg'
+import vk from '@img/vk.svg'
+import { useLocation } from "react-router-dom";
+import {usePageScroll} from '@hooks/useLocation'
+import { Link } from "react-router-dom"; 
 
 const Footer:React .FC = () => {
+    const { handleScrollToBlock } = usePageScroll();
     return (
         <div className="footer">
             <div className="footer-up-blocks">
@@ -10,17 +16,17 @@ const Footer:React .FC = () => {
                         <p>Мы создаем рекламу, которая работает. ваш<br/>
                             растущий успех — наша лучшая рекомендация.</p>
                             <div>
-                                <a href="#"><img src="#" alt="ТГ" /></a>
-                                <a href="#"><img src="#" alt="ВК" /></a>
+                                <a href="#"><img src={tg} alt="ТГ" /></a>
+                                <a href="#"><img src={vk} alt="ВК" /></a>
                             </div>
                 </div>
-                <div className="footer-navigation">
+                <div className="footer-navigation" id="footer-section">
                         <h2>Навигация по сайту</h2>
                         <div className="footer-navigation-links">
-                                <a href="#">Главная</a>
-                                <a href="#">Услуги</a>
-                                <a href="#">О нас</a>
-                                <a href="#">Контакты</a>
+                                <Link to="/">Главная</Link>
+                                <a href="#services" onClick={handleScrollToBlock("services", "tutorial-contact")} >Услуги</a>
+                                <a href="#about" onClick={handleScrollToBlock("welcome-section", "tutorials")}>О нас</a>
+                                <a href="#footer" onClick={handleScrollToBlock("footer-section", "footer-section")}>Контакты</a>
                         </div>
                 </div>
                 <div className="footer-contacts">

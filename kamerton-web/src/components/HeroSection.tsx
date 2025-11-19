@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
                               <h1>80%</h1>
                               <p>скорость<br/>охвата</p>
                         </div>
-                        <img src={GraphImg} alt="" />
+                        <img src={GraphImg} alt="" id="welcome-section"/>
                   </div>
             </div>
             <div className="hero-content-right">

@@ -3,9 +3,16 @@ import "./header.css";
 import { Link } from "react-router-dom"; 
 import { useModalWithAnimation } from "@hooks/useModal"; 
 import FormContact from "@components/formContact";
+import { useSmoothScroll } from "@hooks/smoothScroll";
 
 const Header: React.FC = () => {
   const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
+   const { scrollTo } = useSmoothScroll();
+
+   const handleScrollToFooter = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollTo("footer-section"); 
+  };
 
   return (
     <div className="header-wrapper">
@@ -15,7 +22,7 @@ const Header: React.FC = () => {
           <div className="header-links">
             <Link to="/">о нас</Link>
             <Link to="/catalog">услуги</Link>
-            <Link to="/">контакты</Link>
+            <a href="#footer" onClick={handleScrollToFooter} >контакты</a>
           </div>
           <div className="header-button-container">
             <button className="header-button" onClick={openModal}>

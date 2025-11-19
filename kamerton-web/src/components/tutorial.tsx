@@ -9,9 +9,9 @@ const TutorialCatalog:React.FC = () => {
     const blocksRef = use3dHover(['tutorial-one', 'tutorial-two', 'tutorial-three']);
     const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
     return(
-        <div className="tutorial-catalog">
+        <div className="tutorial-catalog" id="tutorials">
                 <div className="tutorial">
-                        <ScrollButton label="контакты" />
+                        <ScrollButton label="контакты" targetId="tutorial-contact" centered/>
                         <h2>Сейчас мы все расскажем. Все намного проще чем вам кажется!</h2>
                         <div className="tutorial-blocks">
                                 <div className="tutorial-one "  ref={el => { blocksRef.current[0] = el; }}>
@@ -33,7 +33,7 @@ const TutorialCatalog:React.FC = () => {
                 </div>
                 <div className="tutorial-catalog-contact">
                         <h1>Уже готовы к запуску?<br/>Свяжитесь с нами</h1>
-                        <button  onClick={openModal}>связаться</button>
+                        <button  onClick={openModal} id="tutorial-contact">связаться</button>
                 </div>
                 {Modal}
         </div>

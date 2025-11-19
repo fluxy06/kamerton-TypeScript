@@ -6,6 +6,15 @@
   align-content: center;
 }
 
+.error {
+  color: #e40000;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+}
+
+
 .form-contact h1 {
   color: black;
   font-size: calc(18px + 6 * (100vw - 320px) / 880);

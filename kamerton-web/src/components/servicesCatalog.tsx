@@ -2,8 +2,8 @@
     import './servicesCatalog.css'
     import ScrollButton from "@components/ScrollButton";
     import Card from "@components/card";
-    import CityImg from '@img/city-img.svg';
-    import CityImgTwo from '@img/city-banner.svg'
+    import CityImg from '@img/bilbord.svg';
+    import CityImgTwo from '@img/city-img-banner-three.svg'
 import { useScrollToTop } from "@/hooks/scroll-up";
 
     const ServicesCatalog:React.FC = () => {
@@ -13,8 +13,8 @@ import { useScrollToTop } from "@/hooks/scroll-up";
 
         return (
             <div className="services-catalog">
-                    <ScrollButton label="услуги" />
-                    <div className="services-catalog-block-cards">
+                    <ScrollButton label="услуги" targetId="services-catalog-block-cards" centered/>
+                    <div className="services-catalog-block-cards" id="services-catalog-block-cards">
                             <div className="services-catalog-scroll-up">
                                 <h1>Вернуться<br/>на вверх</h1>
                                 <button onClick={scrollToTop}>
@@ -23,8 +23,8 @@ import { useScrollToTop } from "@/hooks/scroll-up";
                                 </svg>
                                 </button>
                             </div>
-                            <Card img={CityImg} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/>
-                            <Card img={CityImgTwo} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/>
+                            <Card img={CityImg} label={"Биллборды"} labelText={"размеры: 2x4, 3x6m"}/>
+                            <Card img={CityImgTwo} label={"Печать баннеров"} labelText={"размеры: следует уточнить"}/>
                     </div>
             </div>
         )

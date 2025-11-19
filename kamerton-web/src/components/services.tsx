@@ -11,9 +11,9 @@ const Services: React.FC = () => {
   return (
     <>
     <div className="services-button-serv">
-          <ScrollButton label="услуги"/>
+          <ScrollButton label="услуги" targetId="services-component" centered/>
     </div>
-    <div className="services-component">
+    <div className="services-component" id="services-component">
            <Link to="/catalog"><Card img={CityImg} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/></Link> 
             <Link to="/catalog"><Card img={CityImgTwo} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/></Link>
              <Link to="/catalog"><Card img={CityImgThree} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/></Link>

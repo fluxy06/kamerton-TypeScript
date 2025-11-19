@@ -4,12 +4,13 @@ import ScrollButton from "@components/ScrollButton";
 import { useModalWithAnimation } from "@hooks/useModal"; 
 import FormContact from "@components/formContact";
 
+
 export const Welcome: React.FC = () => {
     const { openModal, Modal } = useModalWithAnimation({ children: <FormContact /> });
     return (
         <div className="welcome-section">
             <div className="left-welcome">
-                <ScrollButton label="о нас" />
+                <ScrollButton label="о нас" targetId="welcome-section" centered/>
              <h1>Давайте<br/>знакомиться!</h1>
             </div>
             <div className="right-welcome">
@@ -21,7 +22,7 @@ export const Welcome: React.FC = () => {
                     долгосрочные партнерские отношения,<br/>
                     основанные на качестве, ответственности и<br/>
                     взаимном уважении.</p>
-         <button className="welcome-contact" onClick={openModal}>Связаться</button>
+         <button className="welcome-contact" onClick={openModal} id="services">Связаться</button>
             </div>
             {Modal}
         </div>
