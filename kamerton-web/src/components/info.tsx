@@ -1,8 +1,11 @@
 import * as React from "react";
 import './info.css'
 import ScrollButton from "@components/ScrollButton";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const Info: React.FC = ({}) => {
+  const coords: [number, number] = [56.102975, 43.508239];
+  
   return (
     <div className="info">
       <ScrollButton label="контакты" targetId="info-block" centered/>
@@ -29,7 +32,25 @@ const Info: React.FC = ({}) => {
                     <p className="text-mini-info-h3">Пн-Пт: 10:00 - 20:00<br/>Сб-Вс: 10:00 - 20:00</p>
             </div>
             <div className="map">
-                
+               <YMaps
+                  query={{
+                    lang: "ru_RU",
+                    apikey: "b0f1770b-e8e5-4bcb-886c-5f42658a2de3",
+                    load: "package.map,package.controls"
+                  }}
+                  version="2.1"
+                >
+                  <Map
+                    defaultState={{
+                      center: coords,
+                      zoom: 17,
+                      type: "yandex#hybrid" 
+                    }}
+                    style={{ width: "100%", height: "100%" }}
+                  >
+                    <Placemark geometry={coords} />
+                  </Map>
+                </YMaps>
             </div>
       </div>
     </div>
