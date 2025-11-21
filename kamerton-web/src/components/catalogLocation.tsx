@@ -11,16 +11,25 @@ const CatalogLocation:React .FC = () => {
                 <ScrollButton label="локации" targetId="catalog-map" centered/>
                 <h2>Осталось выбрать только локацию!</h2>
                 <div className="catalog-map" id="catalog-map">
-                    <YMaps>
-                       <Map
-                            defaultState={{ center: [56.102975, 43.508239], zoom: 17 }}
-                            width="100%"
-                            height="min(60vh, 500px)"
-                            
-                        >
-                            <Placemark geometry={[56.102975, 43.508239]} />
-                    </Map>
-                </YMaps>
+                     <YMaps
+                                      query={{
+                                        lang: "ru_RU",
+                                        apikey: "b0f1770b-e8e5-4bcb-886c-5f42658a2de3",
+                                        load: "package.map,package.controls"
+                                      }}
+                                      version="2.1"
+                                    >
+                                      <Map
+                                        defaultState={{
+                                          center: coords,
+                                          zoom: 17,
+                                          type: "yandex#hybrid" 
+                                        }}
+                                        style={{ width: "100%", height: "100%" }}
+                                      >
+                                        <Placemark geometry={coords} />
+                                      </Map>
+                                    </YMaps>
                 </div>
         </div>
     )

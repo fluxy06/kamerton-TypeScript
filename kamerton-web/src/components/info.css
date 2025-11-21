@@ -71,15 +71,26 @@
 
 
 .info-block .map {
-    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden; 
     border-radius: 15px;
     grid-column: 3;
     grid-row: 1 / span 2;
     padding: 12px;
     box-sizing: border-box;
-
+    background-color: transparent;
     height: calc( (clamp(100px, calc((100vw - 2 * var(--gap)) / 8), 178.57px)) * 2 + var(--row-gap) );
     min-height: 160px;
+    overflow: hidden; 
+    border-radius: 15px; 
+    padding: 0;  
+    background: transparent;
+}
+
+.info-block .map > div {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 15px;
 }
 
 .info p {
@@ -135,13 +146,15 @@
 }
 
 .info-block .map {
-    background-color: #f0f0f0;
-    border-radius: 15px;
+    background-color: transparent;
     grid-column: 3;
     grid-row: 1 / span 2;
     padding: 12px;
     box-sizing: border-box;
-
+    overflow: hidden; 
+    border-radius: 15px; 
+    padding: 0;  
+    background: transparent;
     height: calc( (clamp(100px, calc((100vw - 2 * var(--gap)) / 8), 178.57px)) * 2 + var(--row-gap) );
     min-height: 160px;
 }
