@@ -5,7 +5,8 @@ import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const Info: React.FC = ({}) => {
   const coords: [number, number] = [56.102975, 43.508239];
-  
+  const apiKey = import.meta.env.VITE_YANDEX_MAP_API;
+
   return (
     <div className="info">
       <ScrollButton label="контакты" targetId="info-block" centered/>
@@ -35,7 +36,7 @@ const Info: React.FC = ({}) => {
                <YMaps
                   query={{
                     lang: "ru_RU",
-                    apikey: "b0f1770b-e8e5-4bcb-886c-5f42658a2de3",
+                    apikey: apiKey,
                     load: "package.map,package.controls"
                   }}
                   version="2.1"
