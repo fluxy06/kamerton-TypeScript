@@ -61,11 +61,11 @@ export const useModalWithAnimation = ({ children }: UseModalWithAnimationOptions
               style={{
                 position: 'relative',
                 background: '#fff',
-                padding: '13px',
+                padding: '40px',
                 borderRadius: '20px',
                 maxWidth: '440px',
                 width: 'clamp(200px, 90vw, 440px)',
-                aspectRatio: '440 / 540',
+                // aspectRatio: '440 / 540',
                 boxSizing: 'border-box',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
               }}

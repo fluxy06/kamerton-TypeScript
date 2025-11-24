@@ -30,7 +30,16 @@ const HeroSection: React.FC = () => {
                               <img src={HeroMiniImgTwo} alt="" />
                               <img src={HeroMiniImg} alt="" />
                               <img src={HeroMiniImgThree} alt="" />
-                              <Link to="/catalog"><div className="next-page-img">Далее</div></Link>
+                              <Link to="/catalog" 
+                                    state={{
+                                          imgID: "bilbord", 
+                                            label: "Реклама, которую невозможно пропустить, на наших билбордах",
+                                            helpLabel: "Это крупноформатные рекламные конструкции, "+
+                                            "расположенные вдоль оживлённых трасс и магистралей."+
+                                            "Они эффективно охватывают водителей и пассажиров автомобилей, "+
+                                            "донося ваше сообщение до самой мобильной и широкой аудитории города."
+                                    }}
+                              ><div className="next-page-img">Далее</div></Link>
                         </div>
                   </div>
                   <div className="hero-content-left-small-catalog">

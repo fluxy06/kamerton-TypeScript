@@ -7,6 +7,7 @@ import { YMaps,Map, Placemark } from "@pbe/react-yandex-maps";
 const CatalogLocation:React .FC = () => {
     const coords: [number, number] = [56.102975, 43.508239];
     const apiKey = import.meta.env.VITE_YANDEX_MAP_API;
+
     return(
         <div className="catalog-location">
                 <ScrollButton label="локации" targetId="catalog-map" centered/>

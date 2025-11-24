@@ -11,12 +11,12 @@ export const PageTransitionWrapper: React.FC<PageTransitionWrapperProps> = ({ ch
     <AnimatePresence mode="wait">
       <motion.div
         key={locationKey}
-        initial={{ opacity: 0, scale: 0.98 }}
+        initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.98 }}
         transition={{
           duration: 0.5,
-          ease: "easeOut"
+          ease: "easeInOut"
         }}
         style={{
           width: "100%",

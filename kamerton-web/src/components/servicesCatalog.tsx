@@ -2,12 +2,12 @@ import * as React from "react";
 import './servicesCatalog.css'
 import ScrollButton from "@components/ScrollButton"; 
 import Card from "@components/card";
-import CityImg from '@img/bilbord.svg';
-import CityImgTwo from '@img/city-img-banner-three.svg'
+import CityImg from '@img/city-img.svg';
+import CityImgTwo from '@img/bilbord.svg'
 import { useScrollToTop } from "@/hooks/scroll-up";
+import { Link } from "react-router-dom"; 
 
     const ServicesCatalog:React.FC = () => {
-
         // Scroll-to-top
         const scrollToTop = useScrollToTop();
 
@@ -23,8 +23,29 @@ import { useScrollToTop } from "@/hooks/scroll-up";
                                 </svg>
                                 </button>
                             </div>
-                            <Card img={CityImg} label={"Биллборды"} labelText={"размеры: 2x4, 3x6m"}/>
-                            <Card img={CityImgTwo} label={"Печать баннеров"} labelText={"размеры: следует уточнить"}/>
+                            <Link to="/catalog" onClick={scrollToTop}
+                                    state={{
+                                            imgID: "city-shield",
+                                            label: "Сити-щиты: реклама, которая работает 24/7",
+                                            helpLabel: "Это современные рекламные конструкции, " +
+                                            "расположенные на остановках общественного транспорта. " +
+                                            "Они эффективно охватывают пешеходов, пассажиров и водителей, "+
+                                            "донося ваше сообщение до самой активной аудитории города."
+
+                                        }}
+                            ><Card img={CityImg} label={"Сити-щиты"} labelText={"размеры: 1.2x1.8m"}/></Link>
+                            <Link to="/catalog" onClick={scrollToTop}
+                                state={{
+                                            imgID: "bilbord", 
+                                            label: "Реклама, которую невозможно пропустить, на наших билбордах",
+                                            helpLabel: "Это крупноформатные рекламные конструкции, "+
+                                            "расположенные вдоль оживлённых трасс и магистралей."+
+                                            "Они эффективно охватывают водителей и пассажиров автомобилей, "+
+                                            "донося ваше сообщение до самой мобильной и широкой аудитории города."
+                                            }}
+                            >
+                                        <Card img={CityImgTwo} label={"Биллборды"} labelText={"размеры: 2x4, 3x6m"}/>
+                            </Link>
                     </div>
             </div>
         )
