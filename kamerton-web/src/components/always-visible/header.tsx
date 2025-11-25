@@ -2,7 +2,7 @@ import * as React from "react";
 import "./header.css";
 import { Link } from "react-router-dom"; 
 import { useModalWithAnimation } from "@hooks/useModal"; 
-import FormContact from "@components/formContact";
+import FormContact from "@components/forms/formContact";
 import { useSmoothScroll } from "@hooks/smoothScroll";
 
 const Header: React.FC = () => {

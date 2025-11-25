@@ -5,7 +5,7 @@ import HeroMiniImgTwo from "@img/hero-mini-two.svg"
 import HeroMiniImgThree from "@img/hero-mini-three.svg"
 import GraphImg from "@img/graph.svg";
 import { useModalWithAnimation } from "@hooks/useModal"; 
-import FormContact from "@components/formContact";
+import FormContact from "@components/forms/formContact";
 import { Link } from "react-router-dom"; 
 
 const HeroSection: React.FC = () => {

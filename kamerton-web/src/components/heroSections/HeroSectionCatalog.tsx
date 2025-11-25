@@ -2,7 +2,7 @@ import * as React from "react";
 import "./HeroSectionCatalog.css";
 import GraphImg from "@img/graph.svg";
 import { useModalWithAnimation } from "@hooks/useModal";
-import FormContact from "@components/formContact";
+import FormContact from "@components/forms/formContact";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom"; 
 

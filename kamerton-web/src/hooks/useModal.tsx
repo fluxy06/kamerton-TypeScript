@@ -9,7 +9,7 @@ interface UseModalWithAnimationOptions {
 
 export const useModalWithAnimation = ({ children }: UseModalWithAnimationOptions) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const openModal = useCallback(() => setIsOpen(true), []);
   const closeModal = useCallback(() => setIsOpen(false), []);
 
@@ -58,10 +58,11 @@ export const useModalWithAnimation = ({ children }: UseModalWithAnimationOptions
             }}
           >
             <div
+            className="modalFormHook"
               style={{
                 position: 'relative',
                 background: '#fff',
-                padding: '40px',
+               padding: '20px',
                 borderRadius: '20px',
                 maxWidth: '440px',
                 width: 'clamp(200px, 90vw, 440px)',

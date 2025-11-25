@@ -64,7 +64,7 @@
     font-weight: 400;
     font-size: calc(6px + 6 * (100vw - 320px) / 700);
     padding: 0px;
-    line-height: 95%;
+    line-height: 125%;
     padding-left: calc(100vw * 0.01965);
     margin: 0px;
 }
@@ -239,7 +239,7 @@
     font-weight: 400;
     font-size: calc(6.5px + 20 * (100vw - 320px) / 700);
     padding: 0px;
-    line-height: 95%;
+    line-height: 125%;
     padding-left: calc(100vw * 0.01965);
     margin: 0px;
 }

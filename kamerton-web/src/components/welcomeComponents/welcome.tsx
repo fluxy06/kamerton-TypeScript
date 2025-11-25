@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./welcome.css"
-import ScrollButton from "@components/ScrollButton";
+import ScrollButton from "@/components/customButtons/ScrollButton";
 import { useModalWithAnimation } from "@hooks/useModal"; 
-import FormContact from "@components/formContact";
+import FormContact from "@components/forms/formContact";
 
 
 export const Welcome: React.FC = () => {

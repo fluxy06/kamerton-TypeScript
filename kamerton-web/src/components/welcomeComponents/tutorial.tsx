@@ -1,9 +1,9 @@
 import * as React from "react";
 import './tutorial.css'
-import ScrollButton from "@components/ScrollButton";
+import ScrollButton from "@/components/customButtons/ScrollButton";
 import { use3dHover } from "@/hooks/use3Deffect";
 import { useModalWithAnimation } from "@hooks/useModal"; 
-import FormContact from "@components/formContact";
+import FormContact from "@components/forms/formContact";
 
 const TutorialCatalog:React.FC = () => {
     const blocksRef = use3dHover(['tutorial-one', 'tutorial-two', 'tutorial-three']);

@@ -1,9 +1,9 @@
 import * as React from "react";
 import './catalog.css';
-import HeroSectionCatalog from "@components/HeroSectionCatalog";
-import CatalogLocation from "@components/catalogLocation";
-import TutorialCatalog from "@components/tutorial";
-import ServicesCatalog from "@/components/servicesCatalog";
+import HeroSectionCatalog from "@/components/heroSections/HeroSectionCatalog";
+import CatalogLocation from "@/components/catalog/catalogLocation";
+import TutorialCatalog from "@/components/welcomeComponents/tutorial";
+import ServicesCatalog from "@/components/services-components/servicesCatalog";
 // CatalogPage Вторая страница 
 const CatalogPage: React.FC = () => {
   return (

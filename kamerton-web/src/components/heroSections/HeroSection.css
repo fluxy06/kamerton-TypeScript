@@ -240,7 +240,7 @@
 }
 
 .hero-content-right {
-  background-image: url('../assets/img/city-img.svg');
+  background-image: url('../src/assets/img/city-img.svg');
   width: 100%;
   max-width: 578px;
   min-width: 288px;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import './servicesCatalog.css'
-import ScrollButton from "@components/ScrollButton"; 
-import Card from "@components/card";
+import ScrollButton from "@/components/customButtons/ScrollButton"; 
+import Card from "@/components/card/card";
 import CityImg from '@img/city-img.svg';
 import CityImgTwo from '@img/bilbord.svg'
 import { useScrollToTop } from "@/hooks/scroll-up";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './formContact.css'
 import { useContactForm } from '@/hooks/useContactForm'
-import AlertPopup from './../modal/AlertProp'
+import AlertPopup from './../../modal/AlertProp'
 
 
 const FormContact:React.FC = () => {

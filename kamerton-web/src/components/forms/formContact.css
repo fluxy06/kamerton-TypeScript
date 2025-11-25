@@ -139,6 +139,7 @@
   opacity: 1;
 }
 
+
 @media screen and (max-width: 700px) {
       .form-contact h1 {
   color: black;
@@ -181,5 +182,4 @@
   border-radius: 6.55px;
   font-size: calc(12px + 10 * (100vw - 320px) / 880);
 }
-
 }

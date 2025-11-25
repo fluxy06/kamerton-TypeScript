@@ -166,7 +166,7 @@
 
 
 .city-shield {
-  background-image: url('../assets/img/city-img.svg');
+  background-image: url('../src/assets/img/city-img.svg');
   width: 100%;
   max-width: 578px;
   min-width: 288px;
@@ -179,7 +179,7 @@
 }
 
 .bilbord {
-  background-image: url('../assets/img/bilbord.svg');
+  background-image: url('../src/assets/img/bilbord.svg');
   width: 100%;
   max-width: 578px;
   min-width: 288px;
@@ -192,7 +192,7 @@
 } 
 
 .banners {
-     background-image: url('../assets/img/city-img-banner-three.svg');
+     background-image: url('../src/assets/img/city-img-banner-three.svg');
       width: 100%;
       max-width: 578px;
       min-width: 288px;

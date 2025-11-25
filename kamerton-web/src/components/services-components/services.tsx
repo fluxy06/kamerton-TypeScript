@@ -1,10 +1,10 @@
 import * as React from "react";
 import "./services.css";
-import Card from "@components/card";
+import Card from "@/components/card/card";
 import CityImg from '@img/city-img.svg'
 import CityImgTwo from '@img/city-banner.svg'
 import CityImgThree from '@img/city-img-banner-three.svg'
-import ScrollButton from "@components/ScrollButton";
+import ScrollButton from "@/components/customButtons/ScrollButton";
 import { Link } from "react-router-dom"; 
 import { useScrollToTop } from "@/hooks/scroll-up";
 

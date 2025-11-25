@@ -1,6 +1,6 @@
 import * as React from "react";
 import './info.css'
-import ScrollButton from "@components/ScrollButton";
+import ScrollButton from "@/components/customButtons/ScrollButton";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 const Info: React.FC = ({}) => {
@@ -45,7 +45,7 @@ const Info: React.FC = ({}) => {
                     defaultState={{
                       center: coords,
                       zoom: 17,
-                      type: "yandex#hybrid" 
+                      type: "yandex#map" 
                     }}
                     style={{ width: "100%", height: "100%" }}
                   >
