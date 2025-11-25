@@ -64,7 +64,7 @@ const FormContact:React.FC = () => {
                         >Оставить заявку</button>
                          <AlertPopup
         show={showAlert}
-        message="Форма успешно отправлена!"
+        message="Заявка успешно отправлена!"
         onClose={() => setShowAlert(false)}
       />
         </div>
